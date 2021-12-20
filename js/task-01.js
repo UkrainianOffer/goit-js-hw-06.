@@ -1,10 +1,17 @@
-const navEl = document.querySelectorAll('li.item');
-console.log(navEl);
+const navEl = document.querySelector('#categories');
+const items = navEl.querySelectorAll('.item');
+console.log(`Number of categories: ${items.length}`);
 
-function sum(...args) {
-  let total = 0;
-  args.forEach(arg => {
-    total += arg;
-  });
-  console.log(total);
-}
+[...items].forEach(item => {
+  // console.log(item);
+  console.log(item.querySelector('h2').textContent);
+  console.log(item.querySelectorAll('li').length);
+});
+
+// function sum(...items) {
+//   let total = 0;
+//   items.forEach(item => {
+//     total += item;
+//   });
+//   console.log(total);
+// }
