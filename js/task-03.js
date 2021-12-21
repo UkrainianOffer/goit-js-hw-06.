@@ -12,22 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const galleryImg = images.map(image => {
-  const li = `document.createElement('${li}')`;
-  const img = `document.createElement('${img}')`;
-  img.append(image);
-  li.append(img);
-  console.log(li);
-  return li;
-});
+const galleryList = images
+  .map(image => {
+    return `<li> <img src="${image.url}" alt="${image.alt}"> </li>`;
+  })
+  .join('');
 
-console.log(li.insertAdjacentElement('afterbegin', img));
-// const galleryImg = images.map(image => {
-//   const li = document.createElement(`${li}`);
-//   const img = document.createElement(`${img}`);
-//   img.append(`${image}`);
-//   li.append(`${img}`);
-//   console.log(`${li}`);
-//   return li;
-// });
-// li.insertAdjacentElement('afterbegin', img);
+const ul = document.querySelector('.gallery');
+
+ul.insertAdjacentHTML('beforeend', galleryList);
