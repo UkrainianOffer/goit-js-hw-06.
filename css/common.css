@@ -13,12 +13,14 @@ body {
   line-height: 1.5;
 }
 
-input {
-  padding: 8px;
-  font: inherit;
+#gallery {
+  padding: 0;
 }
 
-button {
-  padding: 8px 12px;
-  cursor: pointer;
+#gallery li {
+  list-style: none;
+}
+
+#gallery img {
+  width: 500px;
 }

@@ -13,18 +13,28 @@ buttonS.addEventListener('click', () => {
   value.textContent++;
 });
 
-// const refs = {
-//   decrementBtn: document.querySelector('button[data-action="decrement"]'),
-//   decrementBtn: document.querySelector('button[data-action="increment"]'),
-// };
-// let clickV = 0;
+// let counterValue;
 
-// let counterValue = document.querySelector('#value').innerHTML;
+// function increment() {
+//   counterValue += 1;
+//   updateSpan();
+// }
 
-// refs.decrementBtn.addEventListener('click', () => {
-//   console.log((counterValue -= 1));
-// });
+// function decrement() {
+//   counterValue -= 1;
+//   updateSpan();
+// }
 
-// refs.incrementBtn.addEventListener('click', () => {
-//   console.log(counterValue++);
-// });
+// const spanValue = document.querySelector('#value');
+// counterValue = parseInt(spanValue.innerHTML);
+
+// function updateSpan() {
+//   spanValue.innerHTML = counterValue;
+// }
+
+// document
+//   .querySelector('[data-action="decrement"]')
+//   .addEventListener('click', decrement);
+// document
+//   .querySelector('[data-action="increment"]')
+//   .addEventListener('click', increment);

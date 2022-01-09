@@ -1,9 +1,5 @@
 const input = document.querySelector('#name-input');
-const output = document.querySelector('#name-output');
-
-input.addEventListener('keydown', event => {
-  console.log('Keydown: ', event);
-  if (input === '') {
-    return 'Anonymous';
-  } else input === 'keydown';
+const span = document.querySelector('#name-output');
+input.addEventListener('input', () => {
+  span.textContent = input.value.length ? input.value : 'Anonymous';
 });
