@@ -1,40 +1,32 @@
-const buttonF = document.querySelector('button[data-action="decrement"]');
-const buttonS = document.querySelector('button[data-action="increment"]');
-// console.log(buttonS);
+const valueEl = document.querySelector('#value');
+const counterEl = document.querySelector('#counter');
 
-const value = document.querySelector('#value');
-// console.log(value.textContent);
+let counterValue = 0;
 
-buttonF.addEventListener('click', () => {
-  value.textContent -= 1;
-});
+counterEl.addEventListener('click', handleClick);
 
-buttonS.addEventListener('click', () => {
-  value.textContent++;
-});
+function handleClick(event) {
+  if (event.target.tagName === 'BUTTON') {
+    if (event.target.attributes['data-action'].value === 'increment') {
+      counterValue += 1;
+    } else {
+      counterValue -= 1;
+    }
+    valueEl.innerHTML = counterValue;
+  }
+}
 
-// let counterValue;
+// const buttonF = document.querySelector('button[data-action="decrement"]');
+// const buttonS = document.querySelector('button[data-action="increment"]');
+// // console.log(buttonS);
 
-// function increment() {
-//   counterValue += 1;
-//   updateSpan();
-// }
+// const value = document.querySelector('#value');
+// // console.log(value.textContent);
 
-// function decrement() {
-//   counterValue -= 1;
-//   updateSpan();
-// }
+// buttonF.addEventListener('click', () => {
+//   value.textContent -= 1;
+// });
 
-// const spanValue = document.querySelector('#value');
-// counterValue = parseInt(spanValue.innerHTML);
-
-// function updateSpan() {
-//   spanValue.innerHTML = counterValue;
-// }
-
-// document
-//   .querySelector('[data-action="decrement"]')
-//   .addEventListener('click', decrement);
-// document
-//   .querySelector('[data-action="increment"]')
-//   .addEventListener('click', increment);
+// buttonS.addEventListener('click', () => {
+//   value.textContent++;
+// });
